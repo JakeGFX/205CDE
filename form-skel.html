@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	This page demonstrates a form.
+	-->
+	<head>
+		<meta charset="utf-8"/>
+		<title>Demonstrating HTML forms</title>
+	</head>
+	
+	<body>
+		<h1>Turnitin</h1>
+		<form  lang="fi" action="action_page.php">
+			<div>
+				Name: <input type="text" name="studentname"/>
+
+			</div>
+			<br>
+			<div>
+				Student id: 
+				<input type="text" name="id" pattern="[0-9]{7}"/>
+
+			</div>
+			<br>
+			<div>
+				Email:
+				<!--
+				Make an input named "email"
+				-->
+				<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+
+			</div>
+			<br>
+			<div>
+				Assignment:
+				<!--
+				Make an input named "assignment"
+				-->
+				<input type="text" name="assignmentid"/>
+
+			</div>
+			<br>
+			<div>
+				Code:
+				<!--
+				Make an input named "code" which is a text area to put student's code into.
+				-->
+				<textarea id="codeArea" rows="10" cols="70"></textarea>
+
+			</div>
+			<br>
+			<div>
+				Cheat:
+			<!--
+				Make an input named "cheat" which is a check box the student must check.
+			-->
+				<input type="checkbox" name="cheat" required/>
+
+			</div>
+			<br>
+			<div>
+				Pay:
+			<!--
+				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
+			-->
+				<fieldset>
+				<label>
+					<input type="radio" name="payment" value="Visa">Visa
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="payment" value="MasterC">Mastercard
+				</label>
+
+				</fieldset>
+			</div>
+			<br>
+			<div>
+				Score:
+			<!--
+				Make an input named "score" which is a list of choices for the score 
+			-->
+				<fieldset>
+				<select name="scores">
+					<option value="score1">0</option>
+					<option value="score2">20</option>
+					<option value="score3">40</option>
+					<option value="score4">60</option>
+					<option value="score5">80</option>
+					<option value="score6">100</option>
+					<option value="score7">Others</option>
+				</select>
+				<br>
+				<br>
+				<input type="number" name="id"/>
+				</fieldset>
+			</div>
+			<br>
+			<div>
+			<!--
+				Reset button
+			-->
+				<input type="reset" value="Reset everything!"/>
+			</div>
+			<br>
+			<input type="submit" />
+		</form>
+		<br>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate</a>
+	</body>
+</html>
